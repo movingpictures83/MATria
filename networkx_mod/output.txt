@@ -1,0 +1,316 @@
+algorithms/connectivity/tests/test_stoer_wagner.py:import networkx as nx
+algorithms/connectivity/utils.py:import networkx as nx
+algorithms/vitality.py:import networkx as nx
+algorithms/coloring/tests/test_coloring.py:import networkx as nx
+algorithms/coloring/greedy_coloring.py:import networkx as nx
+algorithms/coloring/__init__.py:from networkx.algorithms.coloring.greedy_coloring import *
+algorithms/coloring/greedy_coloring_with_interchange.py:import networkx as nx
+algorithms/hierarchy.py:import networkx as nx
+algorithms/tests/test_vitality.py:import networkx as nx
+algorithms/tests/test_dag.py:import networkx as nx
+algorithms/tests/test_hierarchy.py:import networkx as nx
+algorithms/tests/test_dominance.py:import networkx as nx
+algorithms/tests/test_swap.py:from networkx import *
+algorithms/tests/test_richclub.py:import networkx as nx
+algorithms/tests/test_mst.py:import networkx as nx
+algorithms/tests/test_cluster.py:import networkx as nx
+algorithms/tests/test_dominating.py:import networkx as nx
+algorithms/tests/test_link_prediction.py:import networkx as nx
+algorithms/tests/test_mis.py:import networkx as nx
+algorithms/tests/test_euler.py:import networkx as nx
+algorithms/tests/test_euler.py:from networkx import is_eulerian,eulerian_circuit
+algorithms/tests/test_core.py:import networkx as nx
+algorithms/tests/test_smetric.py:import networkx as nx
+algorithms/tests/test_graphical.py:import networkx as nx
+algorithms/tests/test_graphical.py:        import networkx.generators.atlas as atlas
+algorithms/tests/test_clique.py:import networkx as nx
+algorithms/tests/test_clique.py:from networkx import convert_node_labels_to_integers as cnlti
+algorithms/tests/test_distance_regular.py:import networkx as nx
+algorithms/tests/test_matching.py:import networkx as nx
+algorithms/tests/test_simple_paths.py:import networkx as nx
+algorithms/flow/tests/test_mincost.py:import networkx as nx
+algorithms/flow/utils.py:import networkx as nx
+algorithms/smetric.py:import networkx as nx
+algorithms/smetric.py:#from networkx.generators.smax import li_smax_graph
+algorithms/graphical.py:import networkx as nx
+algorithms/centrality/katz.py:import networkx as nx
+algorithms/centrality/katz.py:from networkx.utils import not_implemented_for
+algorithms/centrality/betweenness.py:import networkx as nx
+algorithms/centrality/tests/test_closeness_centrality.py:import networkx as nx
+algorithms/centrality/tests/test_load_centrality.py:import networkx as nx
+algorithms/centrality/tests/test_betweenness_centrality.py:import networkx as nx
+algorithms/centrality/tests/test_dispersion.py:import networkx as nx
+algorithms/centrality/tests/test_degree_centrality.py:import networkx as nx
+algorithms/centrality/flow_matrix.py:import networkx as nx
+algorithms/centrality/closeness.py:import networkx_mod as nx
+algorithms/centrality/communicability_alg.py:import networkx as nx
+algorithms/centrality/communicability_alg.py:from networkx.utils import *
+algorithms/centrality/harmonic.py:import networkx as nx
+algorithms/euler.py:import networkx as nx
+algorithms/swap.py:import networkx as nx
+algorithms/boundary.py:      A networkx graph 
+algorithms/boundary.py:      A networkx graph 
+algorithms/dominance.py:import networkx as nx
+algorithms/dominance.py:from networkx.utils import not_implemented_for
+algorithms/community/kclique.py:import networkx as nx
+algorithms/community/kclique.py:       Precomputed cliques (use networkx.find_cliques(G))
+algorithms/community/tests/test_kclique.py:import networkx as nx
+algorithms/community/tests/test_kclique.py:from networkx import k_clique_communities
+algorithms/community/__init__.py:from networkx.algorithms.community.kclique import *
+algorithms/block.py:import networkx as nx
+algorithms/block.py:        A networkx Graph or DiGraph
+algorithms/approximation/ramsey.py:import networkx as nx
+algorithms/approximation/tests/test_matching.py:import networkx as nx
+algorithms/approximation/tests/test_matching.py:import networkx.algorithms.approximation as a
+algorithms/approximation/tests/test_independent_set.py:import networkx as nx
+algorithms/approximation/tests/test_independent_set.py:import networkx.algorithms.approximation as a
+algorithms/approximation/tests/test_vertex_cover.py:import networkx as nx
+algorithms/approximation/tests/test_vertex_cover.py:from  networkx.algorithms import approximation as a
+algorithms/approximation/tests/test_ramsey.py:import networkx as nx
+algorithms/approximation/tests/test_ramsey.py:import networkx.algorithms.approximation as apxa
+algorithms/approximation/dominating_set.py:import networkx as nx
+algorithms/approximation/clustering_coefficient.py:from networkx.utils import not_implemented_for
+algorithms/approximation/vertex_cover.py:from networkx.utils import *
+algorithms/approximation/matching.py:import networkx as nx
+algorithms/approximation/clique.py:import networkx as nx
+algorithms/approximation/clique.py:from networkx.algorithms.approximation import ramsey
+algorithms/approximation/independent_set.py:from networkx.algorithms.approximation import clique_removal
+algorithms/dominating.py:import networkx as nx
+algorithms/bipartite/redundancy.py:import networkx as nx
+algorithms/bipartite/redundancy.py:    >>> from networkx.algorithms import bipartite
+algorithms/bipartite/tests/test_centrality.py:import networkx as nx
+algorithms/bipartite/tests/test_centrality.py:from networkx.algorithms import bipartite
+algorithms/bipartite/tests/test_edgelist.py:import networkx as nx
+algorithms/bipartite/tests/test_edgelist.py:from networkx.testing import (assert_edges_equal, assert_nodes_equal, 
+algorithms/bipartite/tests/test_edgelist.py:from networkx.algorithms import bipartite
+algorithms/bipartite/tests/test_spectral_bipartivity.py:import networkx as nx
+algorithms/bipartite/tests/test_spectral_bipartivity.py:from networkx.algorithms.bipartite import spectral_bipartivity as sb
+algorithms/bipartite/tests/test_basic.py:import networkx as nx
+algorithms/bipartite/tests/test_basic.py:from networkx.algorithms import bipartite
+algorithms/bipartite/centrality.py:import networkx as nx
+algorithms/bipartite/spectral.py:import networkx as nx
+algorithms/bipartite/spectral.py:    >>> from networkx.algorithms import bipartite
+algorithms/isomorphism/tests/test_vf2userfunc.py:import networkx as nx
+algorithms/isomorphism/tests/test_vf2userfunc.py:import networkx.algorithms.isomorphism as iso
+algorithms/isomorphism/vf2userfunc.py:import networkx as nx
+algorithms/shortest_paths/generic.py:import networkx as nx
+algorithms/shortest_paths/tests/test_unweighted.py:import networkx as nx
+algorithms/shortest_paths/tests/test_unweighted.py:        from networkx import convert_node_labels_to_integers as cnlti
+algorithms/shortest_paths/tests/test_weighted.py:import networkx as nx
+algorithms/shortest_paths/tests/test_dense.py:import networkx as nx
+algorithms/shortest_paths/tests/test_dense_numpy.py:import networkx as nx
+algorithms/shortest_paths/tests/test_astar.py:import networkx as nx
+algorithms/shortest_paths/tests/test_generic.py:import networkx as nx
+algorithms/shortest_paths/tests/test_generic.py:        from networkx import convert_node_labels_to_integers as cnlti
+algorithms/shortest_paths/dense.py:import networkx as nx
+algorithms/shortest_paths/unweighted.py:import networkx as nx
+algorithms/shortest_paths/astar.py:from networkx import NetworkXError
+algorithms/shortest_paths/astar.py:import networkx as nx
+algorithms/tree/tests/test_recognition.py:import networkx as nx
+algorithms/tree/tests/test_recognition.py:    # https://github.com/networkx/networkx/issues/1144
+algorithms/tree/recognition.py:import networkx as nx
+algorithms/tree/branchings.py:import networkx as nx
+algorithms/dag.py:import networkx as nx
+algorithms/operators/all.py:import networkx as nx
+algorithms/operators/all.py:#from networkx.utils import is_string_like
+algorithms/operators/tests/test_product.py:import networkx as nx
+algorithms/operators/tests/test_product.py:from networkx import tensor_product,cartesian_product,lexicographic_product,strong_product
+algorithms/operators/tests/test_binary.py:import networkx as nx
+algorithms/operators/tests/test_binary.py:from networkx import *
+algorithms/operators/tests/test_binary.py:from networkx.testing import *
+algorithms/operators/tests/test_all.py:import networkx as nx
+algorithms/operators/tests/test_all.py:from networkx.testing import *
+algorithms/operators/tests/test_unary.py:import networkx as nx
+algorithms/operators/tests/test_unary.py:from networkx import *
+algorithms/operators/product.py:import networkx as nx
+algorithms/operators/binary.py:import networkx as nx
+algorithms/operators/binary.py:from networkx.utils import is_string_like
+algorithms/operators/unary.py:import networkx as nx
+algorithms/core.py:import networkx as nx
+algorithms/components/biconnected.py:import networkx as nx
+algorithms/components/biconnected.py:from networkx.utils.decorators import not_implemented_for
+algorithms/components/tests/test_weakly_connected.py:import networkx as nx
+algorithms/components/tests/test_weakly_connected.py:from networkx import NetworkXNotImplemented
+algorithms/components/tests/test_strongly_connected.py:import networkx as nx
+algorithms/components/tests/test_strongly_connected.py:from networkx import NetworkXNotImplemented
+algorithms/components/tests/test_attracting.py:import networkx as nx
+algorithms/components/tests/test_attracting.py:from networkx import NetworkXNotImplemented
+algorithms/components/tests/test_semiconnected.py:import networkx as nx
+algorithms/components/tests/test_connected.py:import networkx as nx
+algorithms/components/tests/test_connected.py:from networkx import convert_node_labels_to_integers as cnlti
+algorithms/components/tests/test_connected.py:from networkx import NetworkXError,NetworkXNotImplemented
+algorithms/components/tests/test_biconnected.py:import networkx as nx
+algorithms/components/tests/test_biconnected.py:from networkx.algorithms.components import biconnected
+algorithms/components/tests/test_biconnected.py:from networkx import NetworkXNotImplemented
+algorithms/components/strongly_connected.py:import networkx as nx
+algorithms/components/strongly_connected.py:from networkx.utils.decorators import not_implemented_for
+algorithms/components/attracting.py:import networkx as nx
+algorithms/components/attracting.py:from networkx.utils.decorators import not_implemented_for
+algorithms/components/semiconnected.py:import networkx as nx
+algorithms/components/semiconnected.py:from networkx.utils import not_implemented_for
+algorithms/components/weakly_connected.py:import networkx as nx
+algorithms/components/weakly_connected.py:from networkx.utils.decorators import not_implemented_for
+algorithms/chordal/tests/test_chordal.py:import networkx as nx
+algorithms/chordal/__init__.py:from networkx.algorithms.chordal.chordal_alg import *
+algorithms/assortativity/connectivity.py:import networkx as nx
+algorithms/assortativity/tests/base_test.py:import networkx as nx
+algorithms/assortativity/tests/test_mixing.py:import networkx as nx
+algorithms/assortativity/tests/test_correlation.py:import networkx as nx
+algorithms/assortativity/tests/test_correlation.py:from networkx.algorithms.assortativity.correlation import attribute_ac
+algorithms/assortativity/tests/test_pairs.py:import networkx as nx
+algorithms/assortativity/tests/test_neighbor_degree.py:import networkx as nx
+algorithms/assortativity/tests/test_connectivity.py:import networkx as nx
+algorithms/assortativity/neighbor_degree.py:import networkx as nx
+algorithms/assortativity/mixing.py:import networkx as nx
+algorithms/assortativity/mixing.py:from networkx.utils import dict_to_numpy_array
+algorithms/assortativity/mixing.py:from networkx.algorithms.assortativity.pairs import node_degree_xy, \
+algorithms/assortativity/pairs.py:import networkx as nx
+algorithms/assortativity/pairs.py:from networkx.utils import dict_to_numpy_array
+algorithms/mis.py:import networkx as nx
+algorithms/richclub.py:import networkx as nx
+algorithms/traversal/tests/test_edgedfs.py:import networkx as nx
+algorithms/traversal/tests/test_dfs.py:import networkx as nx
+algorithms/traversal/tests/test_bfs.py:import networkx as nx
+algorithms/traversal/edgedfs.py:    >>> import networkx as nx
+algorithms/traversal/edgedfs.py:    :func:`networkx.algorithms.traversal.depth_first_search.dfs_edges`, in
+algorithms/traversal/breadth_first_search.py:import networkx as nx
+algorithms/traversal/depth_first_search.py:import networkx as nx
+algorithms/simple_paths.py:import networkx as nx
+algorithms/distance_regular.py:import networkx as nx
+classes/tests/test_function.py:import networkx as nx
+classes/tests/test_digraph_historical.py:import networkx
+classes/tests/test_digraph_historical.py:import networkx as nx
+classes/tests/test_graph_historical.py:import networkx
+classes/tests/test_graph_historical.py:import networkx as nx
+classes/tests/test_special.py:import networkx as nx
+classes/tests/test_ordered.py:import networkx as nx
+classes/function.py:import networkx as nx
+classes/function.py:from networkx.utils import not_implemented_for
+convert_matrix.py:graph constuctor.  The constructor calls the to_networkx_graph() function
+convert_matrix.py:>>> D = nx.to_networkx_graph(a,create_using=nx.DiGraph())
+convert_matrix.py:import networkx as nx
+convert_matrix.py:from networkx.convert import _prep_create_using
+convert_matrix.py:from networkx_mod.utils import not_implemented_for
+convert_matrix.py:    If `create_using` is an instance of :class:`networkx.MultiGraph` or
+convert_matrix.py:    :class:`networkx.MultiDiGraph`, `parallel_edges` is ``True``, and the
+convert_matrix.py:    If `create_using` is an instance of :class:`networkx.MultiGraph` or
+convert_matrix.py:    :class:`networkx.MultiDiGraph`, `parallel_edges` is ``True``, and the
+convert.py:graph constuctor.  The constructor calls the to_networkx_graph() function
+convert.py:import networkx as nx
+convert.py:__all__ = ['to_networkx_graph',
+convert.py:    If create_using is None return the default (just networkx.Graph())
+convert.py:    Otherwise raise an exception because create_using is not a networkx graph.
+convert.py:        raise TypeError("Input graph is not a networkx graph type")
+convert.py:def to_networkx_graph(data,create_using=None,multigraph_input=False):
+drawing/layout.py:import networkx as nx
+drawing/tests/test_pydot.py:import networkx as nx
+drawing/tests/test_pylab.py:import networkx as nx
+drawing/tests/test_layout.py:import networkx as nx
+drawing/tests/test_agraph.py:import networkx as nx
+drawing/nx_agraph.py:import networkx as nx
+drawing/nx_agraph.py:       A networkx graph
+generators/geometric.py:import networkx as nx
+generators/stochastic.py:import networkx as nx
+generators/stochastic.py:from networkx.utils import not_implemented_for
+generators/tests/test_atlas.py:        import networkx.generators.atlas as atlas
+generators/tests/test_line.py:import networkx as nx
+generators/tests/test_line.py:import networkx.generators.line as line
+generators/tests/test_geometric.py:import networkx as nx
+generators/tests/test_intersection.py:import networkx as nx
+generators/tests/test_small.py:from networkx import *
+generators/tests/test_small.py:from networkx.algorithms.isomorphism.isomorph import graph_could_be_isomorphic
+generators/tests/test_small.py:        assert_raises(networkx.exception.NetworkXError, tutte_graph,
+generators/tests/test_classic.py:from networkx import *
+generators/tests/test_ego.py:import networkx as nx
+generators/tests/test_community.py:import networkx as nx
+generators/tests/test_hybrid.py:import networkx as nx
+generators/tests/test_stochastic.py:import networkx as nx
+generators/ego.py:import networkx as nx
+generators/social.py:import networkx as nx
+generators/random_clustered.py:import networkx as nx
+generators/hybrid.py:import networkx as nx
+generators/atlas.py:from networkx.generators.small import make_small_graph
+generators/line.py:import networkx as nx
+generators/line.py:    For more discussion, see the docstring in :mod:`networkx.generators.line`.
+generators/random_graphs.py:import networkx as nx
+generators/random_graphs.py:from networkx.generators.classic import empty_graph, path_graph, complete_graph
+generators/random_graphs.py:    from networkx.generators.degree_seq import degree_sequence_tree
+generators/intersection.py:import networkx as nx
+generators/intersection.py:from networkx.algorithms import bipartite
+generators/community.py:import networkx as nx
+linalg/graphmatrix.py:import networkx as nx
+linalg/graphmatrix.py:    networkx.convert.to_dict_of_dicts which will return a
+linalg/tests/test_graphmatrix.py:import networkx as nx
+linalg/tests/test_graphmatrix.py:from networkx.generators.degree_seq import havel_hakimi_graph
+linalg/tests/test_algebraic_connectivity.py:import networkx as nx
+linalg/tests/test_laplacian.py:import networkx as nx
+linalg/tests/test_laplacian.py:from networkx.generators.degree_seq import havel_hakimi_graph
+linalg/tests/test_spectrum.py:import networkx as nx
+linalg/tests/test_spectrum.py:from networkx.generators.degree_seq import havel_hakimi_graph
+linalg/attrmatrix.py:import networkx as nx
+linalg/spectrum.py:import networkx as nx
+readwrite/leda.py:import networkx as nx 
+readwrite/leda.py:from networkx.exception import NetworkXError
+readwrite/leda.py:from networkx.utils import open_file, is_string_like
+readwrite/adjlist.py:from networkx.utils import make_str, open_file
+readwrite/adjlist.py:import networkx as nx
+readwrite/tests/test_yaml.py:import networkx as nx
+readwrite/tests/test_yaml.py:from networkx.testing import assert_edges_equal, assert_nodes_equal
+readwrite/tests/test_sparse6.py:import networkx as nx
+readwrite/tests/test_sparse6.py:import networkx.readwrite.sparse6 as sg6
+readwrite/tests/test_graph6.py:import networkx as nx
+readwrite/tests/test_graph6.py:import networkx.readwrite.graph6 as g6
+readwrite/tests/test_shp.py:import networkx as nx
+readwrite/tests/test_adjlist.py:import networkx as nx
+readwrite/tests/test_adjlist.py:from networkx.testing import (assert_nodes_equal, assert_edges_equal, 
+readwrite/tests/test_adjlist.py:        # Unit test for https://networkx.lanl.gov/trac/ticket/252
+readwrite/tests/test_leda.py:import networkx as nx
+readwrite/tests/test_gpickle.py:import networkx as nx
+readwrite/tests/test_gpickle.py:from networkx.testing.utils import *
+readwrite/tests/test_pajek.py:from networkx import *
+readwrite/tests/test_pajek.py:from networkx.testing import *
+readwrite/tests/test_gexf.py:import networkx as nx
+readwrite/tests/test_graphml.py:import networkx as nx
+readwrite/tests/test_graphml.py:    # https://networkx.lanl.gov/trac/ticket/544
+readwrite/tests/test_edgelist.py:import networkx as nx
+readwrite/tests/test_edgelist.py:from networkx.testing import (assert_edges_equal, assert_nodes_equal, 
+readwrite/gpickle.py:import networkx as nx
+readwrite/gpickle.py:from networkx.utils import open_file
+readwrite/pajek.py:import networkx as nx
+readwrite/pajek.py:from networkx.utils import is_string_like, open_file, make_str
+readwrite/nx_yaml.py:import networkx as nx
+readwrite/nx_yaml.py:from networkx.utils import open_file
+readwrite/json_graph/tests/test_tree.py:import networkx as nx
+readwrite/json_graph/tests/test_tree.py:from networkx.readwrite.json_graph import *
+readwrite/json_graph/tests/test_node_link.py:import networkx as nx
+readwrite/json_graph/tests/test_node_link.py:from networkx.readwrite.json_graph import *
+readwrite/json_graph/tests/test_adjacency.py:import networkx as nx
+readwrite/json_graph/tests/test_adjacency.py:from networkx.readwrite.json_graph import *
+relabel.py:import networkx as nx
+release.py:name = 'networkx'
+release.py:maintainer_email = "networkx-discuss@googlegroups.com"
+release.py:url = 'http://networkx.github.io/'
+release.py:download_url= 'https://pypi.python.org/pypi/networkx/'
+testing/tests/test_utils.py:import networkx as nx
+testing/tests/test_utils.py:from networkx.testing import *
+testing/__init__.py:from networkx.testing.utils import *
+tests/benchmark.py:#            setup_string='import networkx as NX\nG=NX.%s.%s()\n'%(GC.lower(),GC) \
+tests/benchmark.py:            setup_string='import networkx as NX\nG=NX.%s()\n'%(GC,) \
+utils/tests/test_random_sequence.py:from networkx.utils import uniform_sequence,powerlaw_sequence,\
+utils/tests/test_random_sequence.py:import networkx.utils
+utils/tests/test_misc.py:import networkx as nx
+utils/tests/test_misc.py:from networkx.utils import *
+utils/tests/test_contextmanager.py:import networkx as nx
+utils/tests/test_decorators.py:import networkx as nx
+utils/tests/test_decorators.py:from networkx.utils.decorators import open_file,not_implemented_for
+utils/tests/test_unionfind.py:import networkx as nx
+utils/tests/test_rcm.py:from networkx.utils import reverse_cuthill_mckee_ordering
+utils/tests/test_rcm.py:import networkx as nx
+utils/tests/test_heaps.py:import networkx as nx
+utils/tests/test_heaps.py:from networkx.utils import *
+utils/random_sequence.py:import networkx as nx
+utils/random_sequence.py:    see networkx.Utils.
+utils/random_sequence.py:    >>> from networkx.utils import uniform_sequence, create_degree_sequence
+utils/rcm.py:import networkx as nx
+utils/rcm.py:    >>> from networkx.utils import cuthill_mckee_ordering
+utils/rcm.py:    >>> from networkx.utils import reverse_cuthill_mckee_ordering
