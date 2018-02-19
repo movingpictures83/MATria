@@ -54,14 +54,9 @@ def build_transition_matrix(alpha,x,g,G,M):
         return T
 	for i in range(N):
 		s = 0
-                if (i % 10 == 0):
-                   print "i: ", i
 		for k in range(N):
 			if (g.nodes()[k],g.nodes()[i]) not in g.edges():
 				continue
-                        #else:
-                           #print "FOUND!"
-                        #print dir(g)
 			s += x[k] / g.degree(g.nodes()[k],weight='weight')
 		denominator = alpha * s + (1 - alpha) * 1/float(N)
 		for j in range(N):
@@ -91,7 +86,6 @@ def getNegWeight(negative, tup):
 def calc(g,negative,alpha,M,beta=1):
 	epsilon = 0.000000001
 	#epsilon = 0.000001
-	#print "start calc pagetrust, epsilon =",epsilon
 	N = len(g)
 	x = np.ones(N)
 	x = x * 1/N
@@ -105,31 +99,15 @@ def calc(g,negative,alpha,M,beta=1):
 	while True:
 		t += 1
 		#build the transition matrix T
-		#print "***"
-		#print "*** iteration start, time = ",t
-		#print "***"
-                #print "Building transition matrix..."
 		T = build_transition_matrix(alpha,x,g,G,M)
 		tildeP = np.dot(T,P)
-                #for i in range(N):
-                #   for j in range(N):
-                      #if (P[i][j] != 0):
-                      #   print "Non-zero P value:", P[i][j]
-                      #if (tildeP[i][j] != 0):
-                      #   print "Non-zero TildeP value: ", tildeP[i][j]
-                      #if (P[i][j] != 0 and T[i][j] != 0):
-                      #   print "Both not zero: ", i, " ", j
 		#visualize("P",P)
 		#visualize("tildeP",tildeP)
 		x2 = np.zeros(N)
-                #print "Computing new distrust matrix..."
 		for i in range(N):
 			p = 0
 			for k in range(N):
 				p += G[k,i]*x[k]
-                        #if (tildeP[i][i] != 0):
-                        #   print "Non-zero TildeP for node: ", g.nodes()[i], ".  Value is: ", tildeP[i][i]
-                        #print "TILDEP: ", tildeP[i][i]
 			x2[i] = (1 - tildeP[i][i])**beta*p
 			for j in range(N):
                                 val = getNegWeight(negative, (i, j))
@@ -141,7 +119,6 @@ def calc(g,negative,alpha,M,beta=1):
 				else:
 					P[i,j] = tildeP[i,j]
 		#normalization
-                #print "Normalizing..."
 		tmpl = 0
 		for l in range(N):
 			tmpl += x2[l]
@@ -149,7 +126,6 @@ def calc(g,negative,alpha,M,beta=1):
 			x2[o] = x2[o] / tmpl
 		#visualize("x2",x2)
 		e = is_converged(x,x2)
-		#print "e:",e
 		if e < epsilon:
 			#visualize('pagerank',pagerank)
 			break
@@ -157,7 +133,6 @@ def calc(g,negative,alpha,M,beta=1):
 			#x <- x(t+1)
 			for p in range(N):
 				x[p] = x2[p]
-	#print x2
 	return x2
 
 def test():
@@ -185,8 +160,6 @@ def pagetrust(G):
    for tuple in negativeedges:
       if (tuple[0] < tuple[1]):
          G.remove_edge(G.nodes()[tuple[0]], G.nodes()[tuple[1]])
-   #print G.edges()
-   #raw_input()
    return calc(G, negativeedges, 0.85, 1, 1)
    #return calc(G, negativeedges, 1, 0, 1)
 if __name__=="__main__":
