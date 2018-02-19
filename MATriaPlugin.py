@@ -5,7 +5,7 @@ import random
 import PageTrust
 import networkx_mod
 import os
-print os.path.abspath(networkx_mod.__file__)
+import PyPluMA
 
 #import PNcentrality
 from PNcentrality import *
@@ -66,8 +66,8 @@ ADJ = []
 def buildATriaNetworkXGraph(myfile):
  ADJ.__delslice__(0, len(ADJ))
  if (myfile[len(myfile)-3:] == "csv"):
-  print "*************************************************************************************************"
-  print "Reading CSV File: ", myfile
+  PyPluMA.log("*************************************************************************************************")
+  PyPluMA.log("Reading CSV File: "+myfile)
   G=networkx_mod.Graph()
   ###########################################################
   # Read the file
@@ -116,10 +116,10 @@ def buildATriaNetworkXGraph(myfile):
   ############################################################
 
  else:
-  print "Reading GML File..."
+  PyPluMA.log("Reading GML File...")
   G = networkx_mod.read_gml(myfile)
   bacteria = G.nodes()
-  print "Done."
+  PyPluMA.log("Done.")
 
  return bacteria, G
 
@@ -128,8 +128,8 @@ def buildATriaNetworkXGraph(myfile):
 def buildNetworkXGraph(myfile, clusters=[]):
  ADJ.__delslice__(0, len(ADJ))
  if (myfile[len(myfile)-3:] == "csv"):
-  print "*************************************************************************************************"
-  print "Reading CSV File: ", myfile
+  PyPluMA.log("*************************************************************************************************")
+  PyPluMA.log("Reading CSV File: "+myfile)
   G=networkx_mod.Graph()
   ###########################################################
   # Read the file
@@ -171,10 +171,10 @@ def buildNetworkXGraph(myfile, clusters=[]):
   ############################################################
 
  else:
-  print "Reading GML File..."
+  PyPluMA.log("Reading GML File...")
   G = networkx_mod.read_gml(myfile)
   bacteria = G.nodes()
-  print "Done."
+  PyPluMA.log("Done.")
 
  return bacteria, G
 
@@ -207,7 +207,7 @@ class MATriaPlugin:
     mynodes=[]
     for bac in self.bacteria:
       mynodes.append(bac.strip()[1:len(bac.strip())-1]+"+")
-    print "RUNNING: ", myalg
+    PyPluMA.log("RUNNING: "+myalg)
     for i in range(len(mynodes)):
       if (myalg == "betweenness"):
          tmp = networkx_mod.betweenness_centrality(G, weight='weight', normalized=False, mynodes=mynodes)
@@ -242,7 +242,7 @@ class MATriaPlugin:
         bac = maxkey[0:len(maxkey)-1]
       else:
         bac = maxkey[1:len(maxkey)-1]
-      print "Maxkey: ", bac, " Payoff: ", tmp[maxkey]
+      PyPluMA.log("Maxkey: "+bac+" Payoff: "+str(tmp[maxkey]))
       if (tmp[maxkey] != 0):
        self.iter_results[myalg][bac] = count #tmp[maxkey]
        count += 1
@@ -407,9 +407,9 @@ class MATriaPlugin:
    cor = dict()
    for alg in self.iter_results:
       cor[alg] = []
-   print "*************************************************************************************************"
-   print "FINAL S: ", self.S
-   print "*************************************************************************************************"
+   PyPluMA.log("*************************************************************************************************")
+   PyPluMA.log("FINAL S: "+str(self.S))
+   PyPluMA.log("*************************************************************************************************")
 
    totallength = 0
    for myset in self.S:
@@ -543,8 +543,8 @@ class MATriaPlugin:
 
    for alg in cor:
       results = spearmanr(overall['average'], overall[alg])
-      print "Correlation between MATria and ", alg, ": ", results[0]
+      PyPluMA.log("Correlation between MATria and "+alg+": "+str(results[0]))
 
-   print "*************************************************************************************************"
+   PyPluMA.log("*************************************************************************************************")
 
 
