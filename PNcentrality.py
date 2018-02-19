@@ -96,8 +96,6 @@ def pncentrality(bacteria, G):
  O = numpy.matrix(Ones)
 
  # Compute hStar (traditional centrality)
- print A
- print I - (1.0/(2*n-2))*A
  PN = ((I - (1.0/(2*n-2))*A).getI()) * O
 
  arr = PN.getA()
@@ -112,6 +110,3 @@ def pncentrality(bacteria, G):
  #tuples.sort()
  #tuples.reverse()
  #from tabulate import tabulate
- #print tabulate(tuples, headers=["OTU","PN Centrality"])
-#for i in range(n):
-#   print tuples[i][1], "\t\t", tuples[i][0]
