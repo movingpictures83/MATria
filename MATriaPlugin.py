@@ -190,7 +190,7 @@ class MATriaPlugin:
    self.results = {}
    self.iter_results = {}
    self.sorted_iter_results = {}
-   algs = ["betweenness", "closeness", "degree", "pagetrust", "PN"]
+   algs = ["betweenness", "closeness", "degree", "PN"]#"pagetrust", "PN"]
    numalg = len(algs)
    for alg in algs:
       self.iter_results[alg] = {}
@@ -539,7 +539,6 @@ class MATriaPlugin:
                overall[alg].append(len(self.bacteria)-self.iter_results[alg][bac])
             else:
                overall[alg].append(0) 
-
 
    for alg in cor:
       results = spearmanr(overall['average'], overall[alg])
