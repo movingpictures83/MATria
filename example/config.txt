@@ -1,0 +1,2 @@
+Prefix plugins/MATria/example/
+Plugin MATria inputfile network.csv outputfile network.iteration
