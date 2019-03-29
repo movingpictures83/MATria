@@ -8,6 +8,9 @@ Betweenness centrality measures.
 #    Pieter Swart <swart@lanl.gov>
 #    All rights reserved.
 #    BSD license.
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 from heapq import heappush, heappop
 from maxheapq import heappush_max as maxheappush, heappop_max as maxheappop
 from itertools import count

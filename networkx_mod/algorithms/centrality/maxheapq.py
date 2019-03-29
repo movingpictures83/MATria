@@ -129,7 +129,7 @@ From all times, sorting has always been a Great Art! :-)
 __all__ = ['heappush', 'heappop', 'heapify', 'heapreplace', 'merge',
            'nlargest', 'nsmallest', 'heappushpop']
 
-from itertools import islice, count, imap, izip, tee, chain
+from itertools import islice, count,tee, chain
 from operator import itemgetter
 
 def cmp_lt(x, y):
@@ -433,13 +433,13 @@ def nsmallest(n, iterable, key=None):
 
     # When key is none, use simpler decoration
     if key is None:
-        it = izip(iterable, count())                        # decorate
+        it = zip(iterable, count())                        # decorate
         result = _nsmallest(n, it)
         return map(itemgetter(0), result)                   # undecorate
 
     # General case, slowest method
     in1, in2 = tee(iterable)
-    it = izip(imap(key, in1), count(), in2)                 # decorate
+    it = zip(map(key, in1), count(), in2)                 # decorate
     result = _nsmallest(n, it)
     return map(itemgetter(2), result)                       # undecorate
 
@@ -471,13 +471,13 @@ def nlargest(n, iterable, key=None):
 
     # When key is none, use simpler decoration
     if key is None:
-        it = izip(iterable, count(0,-1))                    # decorate
+        it = zip(iterable, count(0,-1))                    # decorate
         result = _nlargest(n, it)
         return map(itemgetter(0), result)                   # undecorate
 
     # General case, slowest method
     in1, in2 = tee(iterable)
-    it = izip(imap(key, in1), count(0,-1), in2)             # decorate
+    it = zip(map(key, in1), count(0,-1), in2)             # decorate
     result = _nlargest(n, it)
     return map(itemgetter(2), result)                       # undecorate
 
@@ -490,7 +490,7 @@ if __name__ == "__main__":
     sort = []
     while heap:
         sort.append(heappop(heap))
-    print sort
+    #print sort
 
     import doctest
     doctest.testmod()
