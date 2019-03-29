@@ -29,7 +29,7 @@ nx_pygraphviz, nx_pydot
 import warnings
 import itertools
 import networkx as nx
-from networkx.convert import _prep_create_using
+from networkx_mod.convert import _prep_create_using
 from networkx_mod.utils import not_implemented_for
 __author__ = """\n""".join(['Aric Hagberg <aric.hagberg@gmail.com>',
                            'Pieter Swart (swart@lanl.gov)',

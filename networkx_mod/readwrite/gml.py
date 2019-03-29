@@ -417,7 +417,7 @@ def parse_gml_lines(lines, label, destringizer):
     for i, edge in enumerate(edges if isinstance(edges, list) else [edges]):
         source = pop_attr(edge, 'edge', 'source', i)
         target = pop_attr(edge, 'edge', 'target', i)
-	try:
+        try:
            weight = pop_attr(edge, 'edge', 'weight', i)
         except:
            weight = 0.99999#0.25#0.5#0.99999
