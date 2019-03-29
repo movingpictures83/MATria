@@ -261,11 +261,11 @@ def single_source_dijkstra_path_length_product(G, source, cutoff=None,
             if w in dist:
                 if w[len(w)-1] == '+' and vw_dist > dist[w]:
                 #if vw_dist < dist[w]:
-                    print "Vw_dist is: ", vw_dist, " dist[w] is: ", dist[w], " Source: ", source, " v: ", v, " w: ", w
+                    #print "Vw_dist is: ", vw_dist, " dist[w] is: ", dist[w], " Source: ", source, " v: ", v, " w: ", w
                     raise ValueError('Contradictory paths found:',
                                      'negative weights?')
                 if w[len(w)-1] == '-' and vw_dist < dist[w]:
-                    print "Vw_dist is: ", vw_dist, " dist[w] is: ", dist[w], " Source: ", source, " v: ", v, " w: ", w
+                    #print "Vw_dist is: ", vw_dist, " dist[w] is: ", dist[w], " Source: ", source, " v: ", v, " w: ", w
                     raise ValueError('Contradictory paths found:')
             #elif w not in seen or vw_dist < seen[w]:
             elif w not in seen or (w[len(w)-1] == '+' and vw_dist > seen[w]) or (w[len(w)-1] == '-' and vw_dist < seen[w]):
@@ -341,7 +341,7 @@ def single_source_dijkstra_path_length(G, source, cutoff=None,
 
         for w, edgedata in edata:
             #TMC modified
-	    vw_dist = dist[v] + -math.log(abs(edgedata.get(weight, 1)))
+            vw_dist = dist[v] + -math.log(abs(edgedata.get(weight, 1)))
             if cutoff is not None:
                 if vw_dist > cutoff:
                     continue
