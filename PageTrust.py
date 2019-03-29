@@ -17,8 +17,8 @@ debug_flag = 1
 def visualize(name,array):
 	if debug_flag == 0:
 		return
-	print "===== " + name + " ====="
-	print array
+	print("===== " + name + " =====")
+	print(array)
 
 def initialize_P(g,negative):
 	N = len(g)
@@ -31,8 +31,8 @@ def initialize_P(g,negative):
 	return P,tildeP
 
 def build_transition_matrix(alpha,x,g,G,M):
-	N = len(g)
-	T = np.zeros([N,N])
+        N = len(g)
+        T = np.zeros([N,N])
         denominator = np.zeros([N])
         numerator = np.zeros([N,N])
   
@@ -52,22 +52,22 @@ def build_transition_matrix(alpha,x,g,G,M):
         #   T[i][j] = numerator[i][j] / denominator[i]
         #visualize('T', T)
         return T
-	for i in range(N):
-		s = 0
-		for k in range(N):
-			if (g.nodes()[k],g.nodes()[i]) not in g.edges():
-				continue
-			s += x[k] / g.degree(g.nodes()[k],weight='weight')
-		denominator = alpha * s + (1 - alpha) * 1/float(N)
-		for j in range(N):
-			if i == j:
-				continue
-			if (g.nodes()[j],g.nodes()[i]) not in g.edges():
-				continue
-			numerator = alpha * g[g.nodes()[j]][g.nodes()[i]]['weight'] * x[j] / g.degree(g.nodes()[j],weight='weight') + M * (1 - alpha)*(1/float(N))*x[j]
-			T[i][j] = numerator/denominator
-	#visualize('T',T)
-	return T
+        for i in range(N):
+        	s = 0
+        	for k in range(N):
+        		if (g.nodes()[k],g.nodes()[i]) not in g.edges():
+        			continue
+        		s += x[k] / g.degree(g.nodes()[k],weight='weight')
+        	denominator = alpha * s + (1 - alpha) * 1/float(N)
+        	for j in range(N):
+         		if i == j:
+                           continue
+         		if (g.nodes()[j],g.nodes()[i]) not in g.edges():
+         			continue
+         		numerator = alpha * g[g.nodes()[j]][g.nodes()[i]]['weight'] * x[j] / g.degree(g.nodes()[j],weight='weight') + M * (1 - alpha)*(1/float(N))*x[j]
+         		T[i][j] = numerator/denominator
+        #visualize('T',T)
+        return T
 
 def is_converged(x1,x2):
 	m = 0
@@ -113,11 +113,11 @@ def calc(g,negative,alpha,M,beta=1):
                                 val = getNegWeight(negative, (i, j))
 				#if (i,j) in negative:
                                 if (val != 0):
-					P[i,j] = abs(val)  #1
-				elif i == j:
-					P[i,j] = 0
-				else:
-					P[i,j] = tildeP[i,j]
+                                   P[i,j] = abs(val)  #1
+                                elif i == j:
+                                   P[i,j] = 0
+                                else:
+                                   P[i,j] = tildeP[i,j]
 		#normalization
 		tmpl = 0
 		for l in range(N):
