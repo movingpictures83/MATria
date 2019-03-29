@@ -15,7 +15,7 @@ Megasphaera.01	6	6
 TM7_genus_incertae_sedis.08	5	5
 F.Burkholderiaceae.02	4	4
 Fusobacterium.01	3	3
-Bifidobacterium.01	2	2
+Peptoniphilus.03	2	2
 Staphylococcus.01	1	0
 Acinetobacter.01	0	0
 Acinetobacter.02	0	0
@@ -25,6 +25,7 @@ Alicyclobacillus.01	0	0
 Anaerococcus.01	0	0
 Anaerococcus.02	0	0
 Atopobium.01	0	0
+Bifidobacterium.01	0	0
 Bulleidia.01	0	0
 Burkholderia.01	0	0
 C.Betaproteobacteria.01	0	0
@@ -90,7 +91,6 @@ Parvimonas.02	0	0
 Parvimonas.03	0	0
 Peptoniphilus.01	0	0
 Peptoniphilus.02	0	0
-Peptoniphilus.03	0	0
 Peptostreptococcus.01	0	0
 Porphyromonas.03	0	0
 Prevotella.01	0	0
