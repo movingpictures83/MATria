@@ -64,7 +64,7 @@ ADJ = []
 
 
 def buildATriaNetworkXGraph(myfile):
- ADJ.__delslice__(0, len(ADJ))
+ ADJ.__delitem__(slice(0, len(ADJ)))
  if (myfile[len(myfile)-3:] == "csv"):
   PyPluMA.log("*************************************************************************************************")
   PyPluMA.log("Reading CSV File: "+myfile)
@@ -126,7 +126,7 @@ def buildATriaNetworkXGraph(myfile):
 ############################################################
 
 def buildNetworkXGraph(myfile, clusters=[]):
- ADJ.__delslice__(0, len(ADJ))
+ ADJ.__delitem__(slice(0, len(ADJ)))
  if (myfile[len(myfile)-3:] == "csv"):
   PyPluMA.log("*************************************************************************************************")
   PyPluMA.log("Reading CSV File: "+myfile)
@@ -221,13 +221,13 @@ class MATriaPlugin:
          for i in range(len(self.bacteria)):
             if (sum(ADJ[i]) == 0): 
                benchmark = tmp2[G.nodes().index(self.bacteria[i].strip()[1:len(self.bacteria[i].strip())-1])]
-	 for i in range(len(tmp2)):
+         for i in range(len(tmp2)):
             tmp[G.nodes()[i]] = tmp2[i] - benchmark
       elif (myalg == "PN"):
          #tmp2 = PNcentrality.pncentrality(bacteria2, G)
          tmp2 = pncentrality(bacteria2, G)
          tmp = dict()
-	 for i in range(len(tmp2)):
+         for i in range(len(tmp2)):
             tmp[bacteria2[i]] = tmp2[i] - 1  # 1 is neutral
       maxcent = -1
       maxcent = -1
@@ -279,7 +279,7 @@ class MATriaPlugin:
             done = False
             break
       if (tmp[maxkey] == 0 or done):
-	 self.sorted_iter_results[myalg] = sorted(self.iter_results[myalg].items(), key=operator.itemgetter(1))
+         self.sorted_iter_results[myalg] = sorted(self.iter_results[myalg].items(), key=operator.itemgetter(1))
          break
    bacteria2 = []
    for bac in self.bacteria:
@@ -425,7 +425,7 @@ class MATriaPlugin:
                minr = len(self.bacteria)+1
                for element in myset: 
                   for bac in element: 
-                     if (self.iter_results[alg].has_key(bac)):      
+                     if (bac in self.iter_results[alg]):      
                         rank = self.iter_results[alg][bac]
                         if (rank < minr):
                            minr = rank
@@ -486,7 +486,8 @@ class MATriaPlugin:
    # A bit tricky...
    meancor = []
    numalg = len(cor)
-   numnodes = len(cor[cor.keys()[0]])
+   #numnodes = len(cor[cor.keys()[0]])
+   numnodes = len(cor[list(cor)[0]])
    for i in range(numnodes):
       sum = 0.0
       for alg in cor:
