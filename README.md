@@ -1,10 +1,9 @@
 # MATria
 # Language: Python
-# Dependencies: Requires modified networkx libraries (included in networkx_mod)
-#               Also requires numpy 1.13 or higher
 # Input: CSV (network)
-# Output: NOA (central nodes and centrality values)
-# Tested with: PluMA 1.0, Python 2.7
+# Output: prefix (multiple NOA files)
+# Tested with: PluMA 1.1, Python 3.6
+# Dependency: numpy==1.16.0 
 
 PluMA plugin to run the Multiple Ablatio Triadum (Cickovski et al, 2017) algorithm for centrality.
 The plugin expects an input network in the form of a CSV file, where rows and columns both
