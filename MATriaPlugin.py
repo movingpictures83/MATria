@@ -75,7 +75,8 @@ def buildATriaNetworkXGraph(myfile):
   filestuff = open(myfile, 'r')
   firstline = filestuff.readline()
   bacteria = firstline.split(',')
-  bacteria.remove('\"\"')
+  if ('\"\"' in bacteria):
+     bacteria.remove('\"\"')
   n = len(bacteria)
   inf = float("infinity")
   ###########################################################
@@ -137,7 +138,8 @@ def buildNetworkXGraph(myfile, clusters=[]):
   filestuff = open(myfile, 'r')
   firstline = filestuff.readline()
   bacteria = firstline.split(',')
-  bacteria.remove('\"\"')
+  if ('\"\"' in bacteria):
+     bacteria.remove('\"\"')
   n = len(bacteria)
   inf = float("infinity")
   ###########################################################
@@ -498,7 +500,10 @@ class MATriaPlugin:
    meandict = []
    index = 0
    for myset in self.S:
-      meandict.append((meancor[index], myset))
+      if (len(myset) == 1):
+         meandict.append((meancor[index], [myset]))
+      else:
+         meandict.append((meancor[index], myset))
       index += 1
    for bac in self.bacteria:
       bac = bac.strip()
@@ -512,7 +517,13 @@ class MATriaPlugin:
          meandict.append((meancor[index], [bac]))
          index += 1
    
+   #for element in meandict:
+   #   for element2 in meandict:
+   #      print(str(element[0])+"\t"+str(element[1])+"\t"+str(element2[0])+"\t"+str(element2[1]))
+   #      print(element < element2)
    meandict.sort()
+   for element in meandict:
+      print(str(element[0])+"\t"+str(element[1]))
 
    overall = dict()
    overall['average'] = []
@@ -541,9 +552,9 @@ class MATriaPlugin:
             else:
                overall[alg].append(0) 
 
-   for alg in cor:
-      results = spearmanr(overall['average'], overall[alg])
-      PyPluMA.log("Correlation between MATria and "+alg+": "+str(results[0]))
+   #for alg in cor:
+   #   results = spearmanr(overall['average'], overall[alg])
+   #   PyPluMA.log("Correlation between MATria and "+alg+": "+str(results[0]))
 
    PyPluMA.log("*************************************************************************************************")
 
