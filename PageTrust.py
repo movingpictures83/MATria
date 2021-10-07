@@ -1,5 +1,5 @@
 #coding=utf-8
-import networkx as nx
+import networkx_mod as nx
 import numpy as np
 from copy import deepcopy
 
